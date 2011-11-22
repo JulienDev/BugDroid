@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">Bugdroid</string>
+	<string name="splashscreen_message">Please wait while your application is loading.
+	</string>
+
+	<string-array name="bugStatusNew">
+		<item>NEW</item>
+		<item>ASSIGNED</item>
+		<item>RESOLVED</item>
+	</string-array>
+
+	<string-array name="bugStatusAssigned">
+		<item>NEW</item>
+		<item>ASSIGNED</item>
+		<item>RESOLVED</item>
+	</string-array>
+
+	<string-array name="bugStatusResolved">
+		<item>UNCONFIRMED</item>
+		<item>REOPENED</item>
+		<item>RESOLVED</item>
+		<item>VERIFIED</item>
+		<item>CLOSED</item>
+	</string-array>
+
+	<string-array name="bugStatusUnconfirmed">
+		<item>UNCONFIRMED</item>
+		<item>NEW</item>
+		<item>ASSIGNED</item>
+		<item>RESOLVED</item>
+	</string-array>
+
+	<string-array name="bugStatusReopened">
+		<item>NEW</item>
+		<item>ASSIGNED</item>
+		<item>REOPENED</item>
+		<item>RESOLVED</item>
+	</string-array>
+
+	<string-array name="bugStatusVerified">
+		<item>UNCONFIRMED</item>
+		<item>REOPENED</item>
+		<item>RESOLVED</item>
+		<item>VERIFIED</item>
+		<item>CLOSED</item>
+	</string-array>
+	
+		<string-array name="bugStatusClosed">
+		<item>UNCONFIRMED</item>
+		<item>REOPENED</item>
+		<item>RESOLVED</item>
+		<item>CLOSED</item>
+	</string-array>
+	
+		<string-array name="bugResolution">
+		<item>FIXED</item>
+		<item>INVALID</item>
+		<item>WONTFIX</item>
+		<item>LATER</item>
+		<item>REMIND</item>
+		<item>DUPLICATE</item>
+		<item>WORKSFORME</item>
+		<item>MOVED</item>
+	</string-array>
+
+	<string-array name="products">
+		<item>All</item>
+		<item>Add-on SDK</item>
+		<item>addons.mozilla.org</item>
+		<item>AUS</item>
+		<item>Bugzilla</item>
+		<item>bugzilla.mozilla.org</item>
+		<item>Calendar</item>
+		<item>Camino</item>
+		<item>CCK</item>
+		<item>Composer</item>
+		<item>Core</item>
+		<item>Core Graveyard</item>
+		<item>Derivatives</item>
+		<item>Directory</item>
+		<item>Documentation</item>
+		<item>Extend Firefox</item>
+		<item>Fennec</item>
+		<item>Fennec Native</item>
+		<item>Firefox</item>
+		<item>Grendel</item>
+		<item>Input</item>
+		<item>JSS</item>
+		<item>MailNews Core</item>
+		<item>MailNews Core Graveyard</item>
+		<item>Marketing</item>
+		<item>Minimo</item>
+		<item>Mozilla Communities</item>
+		<item>Mozilla Developer Network</item>
+		<item>Mozilla Grants</item>
+		<item>Mozilla Labs</item>
+		<item>Mozilla Labs Graveyard</item>
+		<item>Mozilla Localizations</item>
+		<item>Mozilla Messaging</item>
+		<item>Mozilla Metrics</item>
+		<item>Mozilla QA</item>
+		<item>Mozilla Services</item>
+		<item>mozilla.org</item>
+		<item>MozillaClassic</item>
+		<item>NSPR</item>
+		<item>NSS</item>
+		<item>Other Applications</item>
+		<item>Pancake</item>
+		<item>Penelope</item>
+		<item>Plugins</item>
+		<item>quality.mozilla.org</item>
+		<item>Rhino</item>
+		<item>SeaMonkey</item>
+		<item>Servo</item>
+		<item>Skywriter</item>
+		<item>Snippets</item>
+		<item>support.mozilla.com</item>
+		<item>support.mozillamessaging.com</item>
+		<item>Tamarin</item>
+		<item>Tech Evangelism</item>
+		<item>Testing</item>
+		<item>Testopia</item>
+		<item>Thunderbird</item>
+		<item>Toolkit</item>
+		<item>Toolkit Graveyard</item>
+		<item>Web Apps</item>
+		<item>Websites</item>
+		<item>Websites Graveyard</item>
+		<item>Webtools</item>
+		<item>Webtools Graveyard</item>
+	</string-array>
+
+</resources>

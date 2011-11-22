@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent">
+
+	<LinearLayout android:layout_width="match_parent"
+		android:layout_height="wrap_content" android:id="@+id/linearLayout1">
+
+		<ImageView android:layout_width="wrap_content" android:id="@+id/ivProduct"
+			android:src="@drawable/dino" android:layout_height="wrap_content" />
+
+		<LinearLayout android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:orientation="vertical"
+			android:layout_marginLeft="5dp">
+
+			<TextView android:text="BugSummary" android:id="@+id/tvBugSummary"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:textSize="20dp" android:textColor="#000000"></TextView>
+
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<TextView android:text="BugId" android:id="@+id/tvBugId"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_marginTop="5dp" android:textColor="#000000"></TextView>
+
+				<TextView android:text="BugSeverity" android:id="@+id/tvBugSeverity"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_marginTop="5dp" android:textColor="#000000"></TextView>
+			</LinearLayout>
+			<LinearLayout android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+				<TextView android:text="BugPriority" android:id="@+id/tvBugPriority"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_marginTop="5dp" android:textColor="#000000"></TextView>
+
+				<TextView android:text="BugOS" android:id="@+id/tvBugOS"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:layout_marginTop="5dp" android:textColor="#000000"></TextView>
+			</LinearLayout>
+
+			<TextView android:text="BugAssignee" android:id="@+id/tvBugAssignee"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_marginTop="5dp" android:textColor="#000000"></TextView>
+
+			<TextView android:text="BugStatus" android:id="@+id/tvBugStatus"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_marginTop="5dp" android:textColor="#000000"></TextView>
+
+			<TextView android:text="BugResolution" android:id="@+id/tvBugResolution"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:layout_marginTop="5dp" android:textColor="#000000"></TextView>
+
+		</LinearLayout>
+	</LinearLayout>
+</LinearLayout>

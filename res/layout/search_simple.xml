@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent" android:background="#f0f0f0">
+
+	<ScrollView android:layout_height="fill_parent"
+		android:layout_width="fill_parent">
+
+		<LinearLayout android:layout_height="fill_parent"
+			android:layout_width="fill_parent" android:paddingLeft="10dp"
+			android:paddingRight="10dp" android:orientation="vertical">
+
+			<TextView android:layout_height="wrap_content" android:text="Status"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:textColor="#000000"></TextView>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/sStatus"
+				android:layout_width="match_parent"></Spinner>
+
+			<TextView android:layout_height="wrap_content" android:text="Product"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:textColor="#000000"></TextView>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/sProduct"
+				android:layout_width="match_parent"></Spinner>
+
+			<TextView android:layout_height="wrap_content" android:text="Words"
+				android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:textColor="#000000"></TextView>
+			<EditText android:layout_height="wrap_content" android:id="@+id/etWords"
+				android:layout_width="match_parent">
+			</EditText>
+
+			<TextView android:layout_height="wrap_content" android:id="@+id/tvFrom"
+				android:text="From : 1 day(s)" android:textAppearance="?android:attr/textAppearanceLarge"
+				android:layout_width="wrap_content" android:textColor="#000000"></TextView>
+			<SeekBar android:layout_height="wrap_content" android:id="@+id/sbFrom"
+				android:layout_width="match_parent" android:layout_marginBottom="10dp"></SeekBar>
+
+			<LinearLayout android:layout_height="wrap_content"
+				android:layout_width="fill_parent" android:layout_gravity="bottom">
+
+				<Button android:layout_width="match_parent" android:text="Search"
+					android:layout_height="wrap_content" android:id="@+id/bSearch"
+					android:layout_weight="0.5"></Button>
+
+				<Button android:layout_width="match_parent" android:text="Save search"
+					android:layout_height="wrap_content" android:id="@+id/bSaveSearch"
+					android:onClick="showSaveSearchDialog" android:layout_weight="0.5"></Button>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="CustomDialogTheme" parent="@android:style/Theme.Dialog">
+		<item name="android:windowBackground">@android:color/transparent</item>
+		<item name="android:windowIsFloating">false</item>
+		<item name="android:windowNoTitle">true</item>
+	</style>
+	
+	    <style name="StyledIndicators" parent="@android:style/Theme.Light">
+        <item name="circlePageIndicatorStyle">@style/CustomCirclePageIndicator</item>
+        <item name="titlePageIndicatorStyle">@style/CustomTitlePageIndicator</item>
+    </style>
+
+    <style name="CustomTitlePageIndicator">
+        <item name="android:background">#FFDDDDDD</item>
+        <item name="footerColor">#FFEE3333</item>
+        <item name="footerLineHeight">2dp</item>
+        <item name="footerIndicatorStyle">none</item>
+        <item name="textColor">#FF999999</item>
+        <item name="selectedColor">#FF000000</item>
+        <item name="selectedBold">false</item>
+    </style>
+
+    <style name="CustomCirclePageIndicator">
+        <item name="android:background">#FFCCCCCC</item>
+        <item name="fillColor">#FF888888</item>
+        <item name="strokeColor">#FF000000</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="radius">10dp</item>
+        <item name="centered">true</item>
+    </style>
+    
+    <style name="Theme.PageIndicatorDefaults" parent="@android:style/Theme">
+        <item name="circlePageIndicatorStyle">@style/Widget.CirclePageIndicator</item>
+        <item name="titlePageIndicatorStyle">@style/Widget.TitlePageIndicator</item>
+    </style>
+
+    <style name="Widget.CirclePageIndicator" parent="@android:style/Widget">
+        <item name="centered">@bool/default_circle_indicator_centered</item>
+        <item name="fillColor">@color/default_circle_indicator_fill_color</item>
+        <item name="radius">@dimen/default_circle_indicator_radius</item>
+        <item name="snap">@bool/default_circle_indicator_snap</item>
+        <item name="strokeColor">@color/default_circle_indicator_stroke_color</item>
+        <item name="strokeWidth">@dimen/default_circle_indicator_stroke_width</item>
+    </style>
+
+    <style name="Widget.TitlePageIndicator" parent="@android:style/Widget">
+        <item name="clipPadding">@dimen/default_title_indicator_clip_padding</item>
+        <item name="footerColor">@color/default_title_indicator_footer_color</item>
+        <item name="footerLineHeight">@dimen/default_title_indicator_footer_line_height</item>
+        <item name="footerIndicatorStyle">@integer/default_title_indicator_footer_indicator_style</item>
+        <item name="footerIndicatorHeight">@dimen/default_title_indicator_footer_indicator_height</item>
+        <item name="footerIndicatorUnderlinePadding">@dimen/default_title_indicator_footer_indicator_underline_padding</item>
+        <item name="footerPadding">@dimen/default_title_indicator_footer_padding</item>
+        <item name="selectedColor">@color/default_title_indicator_selected_color</item>
+        <item name="selectedBold">@bool/default_title_indicator_selected_bold</item>
+        <item name="textColor">@color/default_title_indicator_text_color</item>
+        <item name="textSize">@dimen/default_title_indicator_text_size</item>
+        <item name="titlePadding">@dimen/default_title_indicator_title_padding</item>
+    </style>
+</resources>

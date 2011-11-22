@@ -1,0 +1,89 @@
+package fr.julienvermet.bugdroid.products;
+
+import java.util.ArrayList;
+
+import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.text.InputType;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+import fr.julienvermet.bugdroid.R;
+import fr.julienvermet.bugdroid.bugs.search.SearchBugLoadingActivity;
+import fr.julienvermet.bugdroid.bugs.search.SearchBugsLoadingActivity;
+
+public class ProductsActivity extends Activity {
+
+	ArrayList<Product> products = new ArrayList<Product>();
+
+	EditText etSearchBar;
+	
+	ProgressDialog mDialog;
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		products.add( new Product("Core", "Shared components used by Firefox and other Mozilla software, including handling of Web content (HTML, CSS, scripts, images, networking, etc.).", R.drawable.dino));
+		products.add( new Product("Firefox", "The Mozilla Foundation's next-generation web browser", R.drawable.firefox));
+		products.add( new Product("Thunderbird", "The Mozilla Foundation's next-generation email client", R.drawable.thunderbird));
+		products.add( new Product("Calendar", "The Mozilla Calendar project", R.drawable.sunbird));
+		products.add( new Product("Camino", "Camino is a native Mac OS X browser-only project", R.drawable.camino));
+		products.add( new Product("SeaMonkey", "This product covers SeaMonkey, the further developed code of the former Mozilla 1.x application suite, including web browser, e-mail and newsgroup client, and HTML composer.", R.drawable.seamonkey));
+		products.add( new Product("Fennec", "Fennec is the code name of the effort to build a mobile version of Firefox ", R.drawable.fennec));
+		products.add( new Product("Fennec Native", "Fennec is the code name of the effort to build a mobile version of Firefox ", R.drawable.fennec));
+		products.add( new Product("Mozilla Localizations", "Translation, spelling and other errors in language packs and localized builds", R.drawable.dino));
+		products.add( new Product("Mozilla Labs", "For bugs and requests related to management of Mozilla Labs and related projects.", R.drawable.labs));
+		products.add( new Product("Mozilla Services", "For bugs in Mozilla Services products, including the server code, Firefox Home, and Firefox Sync", R.drawable.dino));
+//		products.add( new Product("Other Products", "Other Mozilla products which aren't listed here", R.drawable.other));
+
+		setContentView(R.layout.products);
+
+		etSearchBar = (EditText) findViewById(R.id.etSearchBar);
+		etSearchBar.setHint("Bug ID");
+		etSearchBar.setInputType(InputType.TYPE_CLASS_NUMBER);
+
+		Button bSearchBar = (Button) findViewById(R.id.bSearchBar);
+		bSearchBar.setText("Quick access");
+		bSearchBar.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View arg0) {
+				searchBug();
+			}
+		});
+
+		ListView lvProducts = (ListView) findViewById(R.id.lvProducts);
+		ProductsListAdapter pla = new ProductsListAdapter(products, this);
+		lvProducts.setAdapter(pla);
+
+		lvProducts.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+					long arg3) {
+				
+				Intent intent = new Intent(ProductsActivity.this, SearchBugsLoadingActivity.class);
+				intent.putExtra("product", products.get(position));
+				intent.putExtra("type", "product");
+				startActivity(intent);
+			}
+		});
+	}
+
+	private void searchBug()
+	{
+		if (!etSearchBar.getText().toString().trim().equals(""))
+		{
+			Intent intent = new Intent(ProductsActivity.this, SearchBugLoadingActivity.class);
+			intent.putExtra("bug_id", Integer.parseInt( etSearchBar.getText().toString().trim() ) );
+			startActivity(intent);
+		}	
+	}
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<TextView android:layout_height="wrap_content"
+		android:text="Classification" android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"></TextView>
+	<Spinner android:layout_height="wrap_content" android:id="@+id/sClassification"
+		android:layout_width="match_parent"></Spinner>
+
+	<TextView android:layout_height="wrap_content"
+		android:text="Product" android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"></TextView>
+	<Spinner android:layout_height="wrap_content" android:id="@+id/sProduct"
+		android:layout_width="match_parent"></Spinner>
+
+	<TextView android:layout_height="wrap_content"
+		android:text="Component" android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"></TextView>
+	<Spinner android:layout_height="wrap_content" android:id="@+id/sComponent"
+		android:layout_width="match_parent"></Spinner>
+		
+	<TextView android:layout_height="wrap_content"
+		android:text="Status" android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"></TextView>
+	<Spinner android:layout_height="wrap_content" android:id="@+id/sStatus"
+		android:layout_width="match_parent"></Spinner>
+		
+	<TextView android:layout_height="wrap_content"
+		android:text="Resolution" android:textAppearance="?android:attr/textAppearanceLarge"
+		android:layout_width="wrap_content"></TextView>
+	<Spinner android:layout_height="wrap_content" android:id="@+id/sResolution"
+		android:layout_width="match_parent"></Spinner>
+
+
+	<Button android:layout_height="wrap_content" android:text="Search"
+		android:id="@+id/button1" android:layout_width="match_parent"></Button>
+
+</LinearLayout>

@@ -1,0 +1,65 @@
+package org.mozilla.bugdroid.database;
+
+import java.io.Serializable;
+
+import org.mozilla.bugdroid.users.User;
+
+public class Comment implements Serializable{
+	
+	protected int attachmentId;
+	protected String attachmentRef;
+	protected int bugId;
+	protected User creator;
+	protected String creationTime; //TODO : DATE
+	protected int id;
+	protected Boolean isPrivate;
+	protected String text;
+	
+
+	public Comment(int attachmentId, String attachmentRef, int bugId,
+			User creator, String creationTime, int id, Boolean isPrivate,
+			String text) {
+		super();
+		this.attachmentId = attachmentId;
+		this.attachmentRef = attachmentRef;
+		this.bugId = bugId;
+		this.creator = creator;
+		this.creationTime = creationTime;
+		this.id = id;
+		this.isPrivate = isPrivate;
+		this.text = text;
+	}
+	public Boolean getIsPrivate() {
+		return isPrivate;
+	}
+	public void setIsPrivate(Boolean isPrivate) {
+		this.isPrivate = isPrivate;
+	}
+	public String getText() {
+		return text;
+	}
+	public void setText(String text) {
+		this.text = text;
+	}
+	public int getAttachmentId() {
+		return attachmentId;
+	}
+	public String getAttachmentRef() {
+		return attachmentRef;
+	}
+	public User getCreator() {
+		return creator;
+	}
+	public String getCreationTime() {
+		return creationTime;
+	}
+	public int getId() {
+		return id;
+	}
+	public int getBugId() {
+		return bugId;
+	}
+	public void setBugId(int bugId) {
+		this.bugId = bugId;
+	}
+}

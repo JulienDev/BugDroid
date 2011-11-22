@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	android:orientation="vertical" android:background="#f0f0f0">
+
+	<LinearLayout android:orientation="vertical" android:id="@+id/llComments"
+		android:layout_width="match_parent" android:layout_height="match_parent"
+		android:paddingTop="10dp" android:paddingBottom="10dp">
+
+		<TextView android:text="tvBug" android:id="@+id/tvBug"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textSize="20dp" android:layout_gravity="center_vertical"
+			android:textColor="#000000" android:background="#929bb1" />
+
+		<LinearLayout android:orientation="horizontal"
+			android:layout_width="fill_parent" android:layout_height="match_parent"
+			android:background="#e0e0e0" android:gravity="center_vertical">
+
+			<TextView android:text="tvBugStatus" android:id="@+id/tvBugStatus"
+				android:layout_width="wrap_content" android:layout_height="wrap_content"
+				android:textColor="#000000" android:textSize="20dp"></TextView>
+
+			<Spinner android:layout_width="wrap_content" android:id="@+id/sStatus"
+				android:layout_height="wrap_content" android:clickable="false"></Spinner>
+
+		</LinearLayout>
+
+		<LinearLayout android:orientation="vertical"
+			android:layout_width="fill_parent" android:layout_height="match_parent"
+			android:gravity="center_vertical">
+
+			<LinearLayout android:orientation="horizontal"
+				android:layout_width="fill_parent" android:layout_height="match_parent"
+				android:gravity="center_vertical">
+
+				<TextView android:text="tvBugResolution" android:id="@+id/tvBugResolution"
+					android:layout_width="wrap_content" android:layout_height="wrap_content"
+					android:textColor="#000000" android:textSize="20dp"></TextView>
+
+				<Spinner android:layout_width="wrap_content" android:id="@+id/sResolution"
+					android:layout_height="wrap_content" android:clickable="false"></Spinner>
+
+			</LinearLayout>
+
+			<EditText android:layout_width="wrap_content" android:id="@+id/etDupeOf"
+				android:layout_weight="1" android:layout_height="wrap_content"
+				android:visibility="gone" android:hint="DupeOf" android:layout_marginLeft="115dp">
+			</EditText>
+
+		</LinearLayout>
+
+		<TextView android:text="tvBugProduct" android:id="@+id/tvBugProduct"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="#000000" android:textSize="20dp"
+			android:background="#e0e0e0"></TextView>
+
+		<TextView android:text="tvBugComponent" android:id="@+id/tvBugComponent"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="#000000" android:textSize="20dp"></TextView>
+
+		<TextView android:text="tvBugVersion" android:id="@+id/tvBugVersion"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="#000000" android:textSize="20dp"
+			android:background="#e0e0e0"></TextView>
+
+		<TextView android:text="tvBugPlatform" android:id="@+id/tvBugPlatform"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="#000000" android:textSize="20dp"></TextView>
+
+		<TextView android:text="tvBugImportance" android:id="@+id/tvBugImportance"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="#000000" android:textSize="20dp"
+			android:background="#e0e0e0"></TextView>
+
+		<TextView android:text="tvBugAssignedTo" android:id="@+id/tvBugAssignedTo"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="#000000" android:textSize="20dp" android:autoLink="email"></TextView>
+
+		<TextView android:text="tvBugQaContact" android:id="@+id/tvBugQaContact"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="#000000" android:textSize="20dp"
+			android:background="#e0e0e0" android:autoLink="email"></TextView>
+
+		<TextView android:text="tvBugTargetMilestone" android:id="@+id/tvBugTargetMilestone"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="#000000" android:textSize="20dp"></TextView>
+
+		<TextView android:id="@+id/tvBugKeywords"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:textColor="#000000" android:textSize="20dp"></TextView>
+
+		<Button android:layout_height="wrap_content" android:text="Update"
+			android:id="@+id/bUpdate" android:layout_width="match_parent"
+			android:visibility="gone"></Button>
+
+	</LinearLayout>
+
+</ScrollView>

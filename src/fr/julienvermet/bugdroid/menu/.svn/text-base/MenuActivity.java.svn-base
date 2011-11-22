@@ -1,0 +1,105 @@
+package org.mozilla.bugdroid.menu;
+
+import java.util.ArrayList;
+
+import org.mozilla.bugdroid.R;
+import org.mozilla.bugdroid.bugs.SavedBugsActivity;
+import org.mozilla.bugdroid.preferences.PreferencesActivity;
+import org.mozilla.bugdroid.products.ProductsActivity;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ImageView;
+import android.widget.ListView;
+import android.widget.Toast;
+import android.widget.ViewFlipper;
+
+public class MenuActivity extends Activity{
+
+	private static final int sStopFlash = 0;
+	private static final long sSplashTime = 100;
+	ViewFlipper viewFlipper;
+	Animation anim;
+	ArrayList<Menu> menus = new ArrayList<Menu>();
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		setContentView(R.layout.menu);
+		
+		menus.add(new Menu("List bugs", ProductsActivity.class , R.drawable.file_a_bug));
+		menus.add(new Menu("Saved bugs", SavedBugsActivity.class , R.drawable.file_a_bug));
+		menus.add(new Menu("Search", null , R.drawable.search));
+		menus.add(new Menu("Prefs", PreferencesActivity.class , R.drawable.users));
+
+		viewFlipper = (ViewFlipper)findViewById(R.id.viewFlipper);
+		viewFlipper.setInAnimation(MenuActivity.this, R.anim.view_transition_in_left);
+		viewFlipper.setOutAnimation(MenuActivity.this, R.anim.view_transition_out_left);
+		
+		anim = AnimationUtils.loadAnimation( this, R.anim.slide_left );
+				
+		ImageView ivBugdroid = (ImageView) findViewById(R.id.ivBugdroid);
+		ivBugdroid.startAnimation(anim);
+		
+		Animation anim2 = AnimationUtils.loadAnimation( this, R.anim.fade_in );
+		ListView llMenu = (ListView) findViewById(R.id.llMenu);
+		llMenu.startAnimation(anim2);
+		MenuListAdapter mla = new MenuListAdapter(menus, this);
+		llMenu.setAdapter(mla);
+		
+		llMenu.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> arg0, View arg1, int position,
+					long arg3) {
+				launchActivity(position);
+			}
+		});
+		
+		//Create a message
+		Message msg = new Message();
+		msg.what = sStopFlash;
+		splashHandler.sendMessageDelayed(msg, sSplashTime);
+	}
+
+	/**
+	 * Handler of the splashscreen
+	 */
+	private Handler splashHandler = new Handler() {
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+			case sStopFlash:
+				viewFlipper.showPrevious();
+				
+				break;
+			}
+			super.handleMessage(msg);
+		}
+	};	
+	
+	private void launchActivity(int position)
+	{
+		if (menus.get(position).getIntent() == null)
+			showToast("Not yet availabe");
+		else
+		{
+			Intent intent = new Intent(MenuActivity.this, menus.get(position).getIntent() );
+			startActivity(intent);
+		}
+	}
+	
+	public void showToast(String message)
+	{
+		Toast toast = Toast.makeText(this, message, Toast.LENGTH_SHORT);
+		toast.show();
+	}
+}
