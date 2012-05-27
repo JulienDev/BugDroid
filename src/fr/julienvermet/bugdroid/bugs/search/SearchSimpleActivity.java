@@ -10,8 +10,10 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.inputmethod.EditorInfo;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.Button;
@@ -109,6 +111,17 @@ public class SearchSimpleActivity extends Activity {
 		});
 
 		etWords = (EditText) findViewById(R.id.etWords);
+		etWords.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+			
+			@Override
+			public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
+				if (actionId == EditorInfo.IME_ACTION_SEARCH) {
+					searchBugs();
+					return true;
+				}
+				return false;
+			}
+		});
 
 		final TextView tvFrom = (TextView) findViewById(R.id.tvFrom);
 
