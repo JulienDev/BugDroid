@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Copyright (C) 2013 Julien Vermet
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<resources>
+    
+    <!-- Multi Pane Bugs -->
+    <dimen name="multi_bugs_gradient_width">6dp</dimen>
+    <dimen name="multi_bugs_left_min_width">55dp</dimen>
+    <dimen name="multi_bugs_toolbar_height">48dp</dimen>
+    <dimen name="multi_bugs_bug_width">400dp</dimen>
+    
+    <!-- Multi Bugs Columns -->
+    <string name="multi_bugs_column_id">16</string>
+    <string name="multi_bugs_column_severity">16</string>
+    <string name="multi_bugs_column_status">18</string>
+    <string name="multi_bugs_column_priority">8</string>
+    <string name="multi_bugs_column_os">10</string>
+    <string name="multi_bugs_column_resolution">12</string>
+    <string name="multi_bugs_column_assignee">20</string>
+    
+    <!-- Instances & Accounts -->
+    <dimen name="instances_menu_width">180dp</dimen>
+</resources>

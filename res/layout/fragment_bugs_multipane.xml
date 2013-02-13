@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Copyright (C) 2013 Julien Vermet
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/bugPane"
+        android:layout_width="@dimen/multi_bugs_bug_width"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_gravity="right" >
+
+        <FrameLayout
+            android:id="@+id/fragment_container_bug"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bugToolbar" />
+
+        <FrameLayout
+            android:id="@+id/bugToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/multi_bugs_toolbar_height"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/slidingpane_toolbar_background"
+            android:paddingLeft="8dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical" >
+
+                <ImageButton
+                    android:id="@+id/bugRefresh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@drawable/list_selector"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_action_refresh_dark" />
+
+                <ImageButton
+                    android:id="@+id/bugBookmark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@drawable/list_selector"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_action_star_off_dark" />
+
+                <!-- For edit mode -->
+                <!-- <ImageButton -->
+                <!-- android:id="@+id/bugEdit" -->
+                <!-- android:layout_width="wrap_content" -->
+                <!-- android:layout_height="wrap_content" -->
+                <!-- android:layout_gravity="left|center_vertical" -->
+                <!-- android:background="@drawable/list_selector" -->
+                <!-- android:padding="8dp" -->
+                <!-- android:src="@drawable/ic_action_edit_dark" /> -->
+
+                <ImageButton
+                    android:id="@+id/bugShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left|center_vertical"
+                    android:background="@drawable/list_selector"
+                    android:padding="8dp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_action_share_dark" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical" >
+
+                <ImageButton
+                    android:id="@+id/bugFullscreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_selector"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_action_fullscreen_dark" />
+
+                <ImageButton
+                    android:id="@+id/bugClose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_selector"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_action_close_dark" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bugsPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/slidingpane_background"
+        android:visibility="gone" >
+
+        <FrameLayout
+            android:id="@+id/fragment_container_bugs"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bugsToolbar" />
+
+        <FrameLayout
+            android:id="@+id/bugsToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/multi_bugs_toolbar_height"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/slidingpane_toolbar_background"
+            android:paddingLeft="8dp" >
+
+            <ImageButton
+                android:id="@+id/bugsRefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center_vertical"
+                android:background="@drawable/list_selector"
+                android:padding="8dp"
+                android:src="@drawable/ic_action_refresh_dark" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/leftPane"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="@drawable/slidingpane_background" >
+
+        <FrameLayout
+            android:id="@+id/leftView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/leftToolbar"
+            android:background="#edf2f2" />
+
+        <fr.julienvermet.bugdroid.ui.widget.VerticalTextView
+            android:id="@+id/leftName"
+            style="@style/PaneTextfieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/leftToolbar"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="10dp"
+            android:padding="4dp"
+            android:singleLine="true"
+            android:text="Product :"
+            android:textSize="30sp"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:visibility="gone"
+            android:id="@+id/leftToolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/multi_bugs_toolbar_height"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/slidingpane_toolbar_background" >
+
+            <ImageButton
+                android:id="@+id/leftHandle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="@null"
+                android:padding="16dp"
+                android:src="@drawable/handle" />
+        </FrameLayout>
+    </RelativeLayout>
+
+</FrameLayout>
