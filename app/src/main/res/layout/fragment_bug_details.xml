@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+Copyright (C) 2013 Julien Vermet
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:grid="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <android.support.v7.widget.GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" >
+
+        <!-- <LinearLayout -->
+        <!-- android:layout_width="match_parent" -->
+        <!-- android:layout_height="wrap_content" > -->
+
+        <TextView
+            style="@style/BugTextfieldName"
+            android:layout_width="wrap_content"
+            grid:layout_column="1"
+            grid:layout_row="0"
+            android:text="@string/bug_title" />
+
+        <TextView
+            android:id="@+id/bugSummary"
+            style="@style/BugTextfieldValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            grid:layout_column="3"
+            grid:layout_gravity="fill_horizontal"
+            grid:layout_row="0"
+            android:gravity="left" />
+
+        <TextView
+            style="@style/BugTextfieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="1"
+            grid:layout_gravity="left"
+            grid:layout_row="1"
+            android:text="@string/bug_status" />
+
+        <android.support.v7.widget.Space
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            grid:layout_column="2"
+            grid:layout_gravity="left"
+            grid:layout_row="1" />
+
+        <TextView
+            android:id="@+id/bugStatus"
+            style="@style/BugTextfieldValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="3"
+            grid:layout_gravity="left"
+            grid:layout_row="1" />
+
+        <!-- For edit mode -->
+        <!-- <Spinner -->
+        <!-- android:id="@+id/bugStatus" -->
+        <!-- style="@style/BugDetailsFieldValue" -->
+        <!-- android:layout_width="222dp" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- grid:layout_column="3" -->
+        <!-- grid:layout_row="1" /> -->
+
+        <TextView
+            style="@style/BugTextfieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="1"
+            grid:layout_gravity="left"
+            grid:layout_row="2"
+            android:text="@string/bug_resolution" />
+
+        <TextView
+            android:id="@+id/bugResolution"
+            style="@style/BugTextfieldValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="3"
+            grid:layout_gravity="left"
+            grid:layout_row="2" />
+
+        <!-- For edit mode -->
+        <!-- <Spinner -->
+        <!-- android:id="@+id/bugResolution" -->
+        <!-- style="@style/BugDetailsFieldValue" -->
+        <!-- android:layout_width="222dp" -->
+        <!-- android:layout_height="wrap_content" -->
+        <!-- grid:layout_column="3" -->
+        <!-- grid:layout_row="2" /> -->
+
+        <TextView
+            style="@style/BugTextfieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="1"
+            grid:layout_gravity="left"
+            grid:layout_row="3"
+            android:text="@string/bug_product" />
+
+        <TextView
+            android:id="@+id/bugProduct"
+            style="@style/BugTextfieldValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="3"
+            grid:layout_gravity="left"
+            grid:layout_row="3" />
+
+        <TextView
+            style="@style/BugTextfieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="1"
+            grid:layout_gravity="left"
+            grid:layout_row="4"
+            android:text="@string/bug_component" />
+
+        <TextView
+            android:id="@+id/bugComponent"
+            style="@style/BugTextfieldValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="3"
+            grid:layout_gravity="left"
+            grid:layout_row="4" />
+
+        <TextView
+            style="@style/BugTextfieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="1"
+            grid:layout_gravity="left"
+            grid:layout_row="5"
+            android:text="@string/bug_version" />
+
+        <TextView
+            android:id="@+id/bugVersion"
+            style="@style/BugTextfieldValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="3"
+            grid:layout_gravity="left"
+            grid:layout_row="5" />
+
+        <TextView
+            style="@style/BugTextfieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="1"
+            grid:layout_gravity="left"
+            grid:layout_row="6"
+            android:text="@string/bug_platform" />
+
+        <TextView
+            android:id="@+id/bugPlatform"
+            style="@style/BugTextfieldValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="3"
+            grid:layout_gravity="left"
+            grid:layout_row="6" />
+
+        <TextView
+            style="@style/BugTextfieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="1"
+            grid:layout_gravity="left"
+            grid:layout_row="7"
+            android:text="@string/bug_importance" />
+
+        <TextView
+            android:id="@+id/bugImportance"
+            style="@style/BugTextfieldValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="3"
+            grid:layout_gravity="left"
+            grid:layout_row="7" />
+
+        <TextView
+            style="@style/BugTextfieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="1"
+            grid:layout_gravity="left"
+            grid:layout_row="8"
+            android:text="@string/bug_assigned_to" />
+
+        <TextView
+            android:id="@+id/bugAssignedTo"
+            style="@style/BugTextfieldValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            grid:layout_column="3"
+            grid:layout_gravity="fill_horizontal"
+            grid:layout_row="8"
+            android:autoLink="email" />
+
+        <TextView
+            style="@style/BugTextfieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="1"
+            grid:layout_gravity="left"
+            grid:layout_row="9"
+            android:text="@string/bug_qa_contact" />
+
+        <TextView
+            android:id="@+id/bugQAContact"
+            style="@style/BugTextfieldValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            grid:layout_column="3"
+            grid:layout_gravity="fill_horizontal"
+            grid:layout_row="9" />
+
+        <TextView
+            style="@style/BugTextfieldName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="1"
+            grid:layout_gravity="left"
+            grid:layout_row="10"
+            android:text="@string/bug_target_mil" />
+
+        <TextView
+            android:id="@+id/bugTargetMil"
+            style="@style/BugTextfieldValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            grid:layout_column="3"
+            grid:layout_gravity="left"
+            grid:layout_row="10" />
+
+        <android.support.v7.widget.Space
+            android:layout_width="8dp"
+            android:layout_height="15dp"
+            grid:layout_column="0" />
+        <!-- </LinearLayout> -->
+    </android.support.v7.widget.GridLayout>
+
+</ScrollView>
